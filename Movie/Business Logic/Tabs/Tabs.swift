@@ -25,14 +25,14 @@ enum Tabs: Int, CaseIterable {
         }
     }
 
-    var assosiatedImage: UIImage {
+    var assosiatedImage: UIImage? {
         switch self {
         case .movie:
             let image = UIImage(systemName: "video.fill")
-            return image!
+            return image
         case .favourite:
             let image = UIImage(systemName: "star.fill")
-            return image!
+            return image
         }
     }
 }
