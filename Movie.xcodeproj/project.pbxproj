@@ -29,6 +29,14 @@
 		DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307A28943E3D00D32EAA /* FavouriteViewModel.swift */; };
 		DC38307D28943E4700D32EAA /* FavouriteAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307C28943E4700D32EAA /* FavouriteAssembly.swift */; };
 		DC38307F28943E4F00D32EAA /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307E28943E4F00D32EAA /* FavouriteViewController.swift */; };
+		DC38308428966B3000D32EAA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308328966B3000D32EAA /* Endpoint.swift */; };
+		DC38308628966B3B00D32EAA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308528966B3B00D32EAA /* HTTPClient.swift */; };
+		DC38308828966B4200D32EAA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308728966B4200D32EAA /* HTTPMethod.swift */; };
+		DC38308A28966B4D00D32EAA /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308928966B4D00D32EAA /* RequestError.swift */; };
+		DC38308E28966B6600D32EAA /* MoviesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308D28966B6600D32EAA /* MoviesEndpoint.swift */; };
+		DC38309228966B9000D32EAA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309128966B9000D32EAA /* Movie.swift */; };
+		DC38309428966F8200D32EAA /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309328966F8200D32EAA /* MoviesService.swift */; };
+		DC38309628966FDA00D32EAA /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309528966FDA00D32EAA /* TopRated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +64,14 @@
 		DC38307A28943E3D00D32EAA /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		DC38307C28943E4700D32EAA /* FavouriteAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteAssembly.swift; sourceTree = "<group>"; };
 		DC38307E28943E4F00D32EAA /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		DC38308328966B3000D32EAA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DC38308528966B3B00D32EAA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DC38308728966B4200D32EAA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DC38308928966B4D00D32EAA /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		DC38308D28966B6600D32EAA /* MoviesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEndpoint.swift; sourceTree = "<group>"; };
+		DC38309128966B9000D32EAA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		DC38309328966F8200D32EAA /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
+		DC38309528966FDA00D32EAA /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +104,9 @@
 		DC383034289422BB00D32EAA /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				DC38308128966B0A00D32EAA /* Network */,
 				DC38306D289436A100D32EAA /* Views */,
-				DC38306A289431D800D32EAA /* Helper */,
+				DC38306A289431D800D32EAA /* Helpers */,
 				DC38304A2894267700D32EAA /* Business Logic */,
 				DC3830492894235C00D32EAA /* App */,
 				DC38303E289422BC00D32EAA /* Assets.xcassets */,
@@ -138,12 +155,12 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
-		DC38306A289431D800D32EAA /* Helper */ = {
+		DC38306A289431D800D32EAA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				DC38306B289431EB00D32EAA /* UIViewController+Helper.swift */,
 			);
-			path = Helper;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DC38306D289436A100D32EAA /* Views */ = {
@@ -185,6 +202,53 @@
 				DC38306828942B7500D32EAA /* RootAssembly.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		DC38308128966B0A00D32EAA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC38308228966B1D00D32EAA /* BaseNetwork */,
+				DC38308F28966B7600D32EAA /* Endpoints */,
+				DC383097289671A600D32EAA /* Services */,
+				DC38309028966B8700D32EAA /* Models */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DC38308228966B1D00D32EAA /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				DC38308328966B3000D32EAA /* Endpoint.swift */,
+				DC38308528966B3B00D32EAA /* HTTPClient.swift */,
+				DC38308728966B4200D32EAA /* HTTPMethod.swift */,
+				DC38308928966B4D00D32EAA /* RequestError.swift */,
+			);
+			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
+		DC38308F28966B7600D32EAA /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				DC38308D28966B6600D32EAA /* MoviesEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		DC38309028966B8700D32EAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC38309128966B9000D32EAA /* Movie.swift */,
+				DC38309528966FDA00D32EAA /* TopRated.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC383097289671A600D32EAA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC38309328966F8200D32EAA /* MoviesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +326,13 @@
 				DC38306928942B7500D32EAA /* RootAssembly.swift in Sources */,
 				DC38306028942AE600D32EAA /* ViewModeling.swift in Sources */,
 				DC38307F28943E4F00D32EAA /* FavouriteViewController.swift in Sources */,
+				DC38309428966F8200D32EAA /* MoviesService.swift in Sources */,
 				DC38307328943E1700D32EAA /* MovieViewModel.swift in Sources */,
+				DC38308628966B3B00D32EAA /* HTTPClient.swift in Sources */,
 				DC38307D28943E4700D32EAA /* FavouriteAssembly.swift in Sources */,
+				DC38309228966B9000D32EAA /* Movie.swift in Sources */,
+				DC38308A28966B4D00D32EAA /* RequestError.swift in Sources */,
+				DC38308428966B3000D32EAA /* Endpoint.swift in Sources */,
 				DC38305E28942ADA00D32EAA /* BaseViewController.swift in Sources */,
 				DC38305C28942A9700D32EAA /* BaseTabRootViewController.swift in Sources */,
 				DC38307128943E0700D32EAA /* MovieContentView.swift in Sources */,
@@ -272,11 +341,14 @@
 				DC38307528943E2000D32EAA /* MovieViewController.swift in Sources */,
 				DC38306728942B6B00D32EAA /* RootViewModel.swift in Sources */,
 				DC38306528942B6000D32EAA /* RootViewController.swift in Sources */,
+				DC38309628966FDA00D32EAA /* TopRated.swift in Sources */,
 				DC38305828942A5B00D32EAA /* BaseViewModel.swift in Sources */,
 				DC38307728943E2900D32EAA /* MovieAssembly.swift in Sources */,
 				DC383038289422BB00D32EAA /* SceneDelegate.swift in Sources */,
+				DC38308828966B4200D32EAA /* HTTPMethod.swift in Sources */,
 				DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */,
 				DC38307928943E3200D32EAA /* FavouriteContentView.swift in Sources */,
+				DC38308E28966B6600D32EAA /* MoviesEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
