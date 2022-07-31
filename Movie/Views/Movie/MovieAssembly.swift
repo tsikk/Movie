@@ -11,7 +11,7 @@ struct MovieAssembly {
     
     static func build() -> UIViewController {
         
-        let viewModel = MovieViewModel()
+        let viewModel = MovieViewModel(service: MoviesService())
         let view = MovieContentView(viewModel: viewModel)
         let controller = MovieViewController(rootView: view)
         controller.viewModel = viewModel
