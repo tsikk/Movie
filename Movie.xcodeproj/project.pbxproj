@@ -37,6 +37,7 @@
 		DC38309228966B9000D32EAA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309128966B9000D32EAA /* Movie.swift */; };
 		DC38309428966F8200D32EAA /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309328966F8200D32EAA /* MoviesService.swift */; };
 		DC38309628966FDA00D32EAA /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309528966FDA00D32EAA /* TopRated.swift */; };
+		DC38309B2896A2B600D32EAA /* MovieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309A2896A2B600D32EAA /* MovieCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		DC38309128966B9000D32EAA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		DC38309328966F8200D32EAA /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		DC38309528966FDA00D32EAA /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
+		DC38309A2896A2B600D32EAA /* MovieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +168,9 @@
 		DC38306D289436A100D32EAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC38306F289436BA00D32EAA /* Favourite */,
 				DC38306E289436B400D32EAA /* Movie */,
+				DC38306F289436BA00D32EAA /* Favourite */,
+				DC3830982896A29B00D32EAA /* Other */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +252,22 @@
 				DC38309328966F8200D32EAA /* MoviesService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DC3830982896A29B00D32EAA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DC3830992896A2A800D32EAA /* MovieCardView */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DC3830992896A2A800D32EAA /* MovieCardView */ = {
+			isa = PBXGroup;
+			children = (
+				DC38309A2896A2B600D32EAA /* MovieCardView.swift */,
+			);
+			path = MovieCardView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +364,7 @@
 				DC38305828942A5B00D32EAA /* BaseViewModel.swift in Sources */,
 				DC38307728943E2900D32EAA /* MovieAssembly.swift in Sources */,
 				DC383038289422BB00D32EAA /* SceneDelegate.swift in Sources */,
+				DC38309B2896A2B600D32EAA /* MovieCardView.swift in Sources */,
 				DC38308828966B4200D32EAA /* HTTPMethod.swift in Sources */,
 				DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */,
 				DC38307928943E3200D32EAA /* FavouriteContentView.swift in Sources */,
