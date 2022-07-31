@@ -16,8 +16,11 @@ struct MovieContentView: View {
     
     private var listOfMovies: some View {
         List(viewModel.movies, id: \.self) { movie in
-            Text("\(movie.title)")
+            MovieCardView(movie: movie)
+                .listRowInsets(EdgeInsets())
+                .listRowSeparator(.hidden)
         }
+        .listStyle(.plain)
     }
 }
 
