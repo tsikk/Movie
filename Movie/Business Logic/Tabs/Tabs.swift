@@ -58,10 +58,7 @@ fileprivate extension UIViewController {
     var wrapped: UIViewController {
         let navigationController = UINavigationController(rootViewController: self)
         navigationController.navigationBar.tintColor = .black
-
-        let shadowImage = UIImage()
-        navigationController.navigationBar.setBackgroundImage(shadowImage, for: .default)
-        navigationController.navigationBar.shadowImage = shadowImage
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.isTranslucent = true
 
         return navigationController
