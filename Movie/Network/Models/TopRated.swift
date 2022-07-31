@@ -21,8 +21,3 @@ struct TopRated: Decodable, Hashable {
     }
 }
 
-extension TopRated: Identifiable {
-    var id: Int {
-        page
-    }
-}
