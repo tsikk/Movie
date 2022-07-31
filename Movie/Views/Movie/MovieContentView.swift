@@ -11,12 +11,20 @@ struct MovieContentView: View {
     @ObservedObject var viewModel: MovieViewModel
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            listOfMovies
+    }
+    
+    private var listOfMovies: some View {
+        List(viewModel.movies, id: \.self) { movie in
+            Text("\(movie.title)")
+        }.task {
+            await viewModel.loadList()
+        }
     }
 }
 
-//struct MovieContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MovieContentView()
-//    }
-//}
+struct MovieContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        MovieContentView(viewModel: MovieViewModel(service: MoviesService()))
+    }
+}
