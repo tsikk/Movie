@@ -11,6 +11,7 @@ class MovieViewModel: BaseViewModel {
     
     @Published var movies: [Movie] = []
     private let service: MoviesServiceable
+    private let router = MovieRouter()
     
     init(service: MoviesServiceable) {
         self.service = service
@@ -28,8 +29,8 @@ class MovieViewModel: BaseViewModel {
     }
     
     // MARK: Methods
-    private func fetchData() async -> Result<TopRated, RequestError>{
-            await service.getTopRated()
+    func openSelectedMovie(with movie: Movie) {
+        router.openSelectedMovie(with: movie)
     }
     
     @MainActor
@@ -46,6 +47,10 @@ class MovieViewModel: BaseViewModel {
             //break
             break
         }
+    }
+    
+    private func fetchData() async -> Result<TopRated, RequestError>{
+            await service.getTopRated()
     }
     
     private func showDetail(_ movie: Movie) {

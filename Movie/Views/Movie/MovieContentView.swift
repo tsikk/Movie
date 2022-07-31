@@ -19,6 +19,9 @@ struct MovieContentView: View {
             MovieCardView(movie: movie)
                 .listRowInsets(EdgeInsets())
                 .listRowSeparator(.hidden)
+                .onTapGesture {
+                    viewModel.openSelectedMovie(with: movie)
+                }
         }
         .listStyle(.plain)
     }
