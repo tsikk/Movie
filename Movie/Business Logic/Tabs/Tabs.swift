@@ -28,10 +28,10 @@ enum Tabs: Int, CaseIterable {
     var assosiatedImage: UIImage {
         switch self {
         case .movie:
-            let image = UIImage(systemName: "star")
+            let image = UIImage(systemName: "video.fill")
             return image!
         case .favourite:
-            let image = UIImage(systemName: "camera.fill")
+            let image = UIImage(systemName: "star.fill")
             return image!
         }
     }
