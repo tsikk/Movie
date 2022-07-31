@@ -19,7 +19,7 @@ enum Tabs: Int, CaseIterable {
     var title: String {
         switch self {
         case .movie:
-            return "Movie"
+            return "Movies"
         case .favourite:
             return "Favourite"
         }

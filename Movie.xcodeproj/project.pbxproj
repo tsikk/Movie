@@ -39,6 +39,10 @@
 		DC38309628966FDA00D32EAA /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309528966FDA00D32EAA /* TopRated.swift */; };
 		DC38309B2896A2B600D32EAA /* MovieCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38309A2896A2B600D32EAA /* MovieCardView.swift */; };
 		DC38309E2896A4B400D32EAA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC38309D2896A4B400D32EAA /* Kingfisher */; };
+		DC3830A12896C16600D32EAA /* SelectedMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A02896C16600D32EAA /* SelectedMovieViewModel.swift */; };
+		DC3830A52896C17D00D32EAA /* SelectedMovieContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A42896C17D00D32EAA /* SelectedMovieContentView.swift */; };
+		DC3830A72896C19300D32EAA /* SelectedMovieAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A62896C19300D32EAA /* SelectedMovieAssembly.swift */; };
+		DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A82896C2D000D32EAA /* MovieRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +79,10 @@
 		DC38309328966F8200D32EAA /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		DC38309528966FDA00D32EAA /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
 		DC38309A2896A2B600D32EAA /* MovieCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardView.swift; sourceTree = "<group>"; };
+		DC3830A02896C16600D32EAA /* SelectedMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMovieViewModel.swift; sourceTree = "<group>"; };
+		DC3830A42896C17D00D32EAA /* SelectedMovieContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMovieContentView.swift; sourceTree = "<group>"; };
+		DC3830A62896C19300D32EAA /* SelectedMovieAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMovieAssembly.swift; sourceTree = "<group>"; };
+		DC3830A82896C2D000D32EAA /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +178,7 @@
 		DC38306D289436A100D32EAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DC38309F2896C15600D32EAA /* Selected */,
 				DC38306E289436B400D32EAA /* Movie */,
 				DC38306F289436BA00D32EAA /* Favourite */,
 				DC3830982896A29B00D32EAA /* Other */,
@@ -184,6 +193,7 @@
 				DC38307228943E1700D32EAA /* MovieViewModel.swift */,
 				DC38307428943E2000D32EAA /* MovieViewController.swift */,
 				DC38307628943E2900D32EAA /* MovieAssembly.swift */,
+				DC3830A82896C2D000D32EAA /* MovieRouter.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -272,6 +282,16 @@
 			path = MovieCardView;
 			sourceTree = "<group>";
 		};
+		DC38309F2896C15600D32EAA /* Selected */ = {
+			isa = PBXGroup;
+			children = (
+				DC3830A02896C16600D32EAA /* SelectedMovieViewModel.swift */,
+				DC3830A42896C17D00D32EAA /* SelectedMovieContentView.swift */,
+				DC3830A62896C19300D32EAA /* SelectedMovieAssembly.swift */,
+			);
+			path = Selected;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3830A12896C16600D32EAA /* SelectedMovieViewModel.swift in Sources */,
 				DC38306C289431EB00D32EAA /* UIViewController+Helper.swift in Sources */,
 				DC38306328942B5300D32EAA /* Tabs.swift in Sources */,
 				DC38306928942B7500D32EAA /* RootAssembly.swift in Sources */,
@@ -367,11 +388,14 @@
 				DC383036289422BB00D32EAA /* AppDelegate.swift in Sources */,
 				DC38307528943E2000D32EAA /* MovieViewController.swift in Sources */,
 				DC38306728942B6B00D32EAA /* RootViewModel.swift in Sources */,
+				DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */,
 				DC38306528942B6000D32EAA /* RootViewController.swift in Sources */,
 				DC38309628966FDA00D32EAA /* TopRated.swift in Sources */,
 				DC38305828942A5B00D32EAA /* BaseViewModel.swift in Sources */,
 				DC38307728943E2900D32EAA /* MovieAssembly.swift in Sources */,
+				DC3830A52896C17D00D32EAA /* SelectedMovieContentView.swift in Sources */,
 				DC383038289422BB00D32EAA /* SceneDelegate.swift in Sources */,
+				DC3830A72896C19300D32EAA /* SelectedMovieAssembly.swift in Sources */,
 				DC38309B2896A2B600D32EAA /* MovieCardView.swift in Sources */,
 				DC38308828966B4200D32EAA /* HTTPMethod.swift in Sources */,
 				DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */,

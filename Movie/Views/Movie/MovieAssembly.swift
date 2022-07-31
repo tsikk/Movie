@@ -15,7 +15,7 @@ struct MovieAssembly {
         let view = MovieContentView(viewModel: viewModel)
         let controller = MovieViewController(rootView: view)
         controller.viewModel = viewModel
-        controller.title = "Movie"
+        controller.title = "Movies"
         controller.tabBarItem = TabFactory.barItem(for: .movie)
         return controller
     }
