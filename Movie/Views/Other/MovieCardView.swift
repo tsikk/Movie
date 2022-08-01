@@ -10,6 +10,7 @@ import Kingfisher
 
 struct MovieCardView: View {
     var movie: MoviesModel
+    var viewModel: MovieViewModel
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -26,7 +27,7 @@ struct MovieCardView: View {
                 Spacer()
                 
                 Button {
-                    print("tapped on star")
+                    viewModel.tappedOnFavourite(movie: movie)
                 } label: {
                     Image(systemName: movie.isFavourite ? "star.fill" : "star")
                         .foregroundColor(.red)

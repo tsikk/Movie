@@ -47,6 +47,7 @@
 		DC3830B12897A3A500D32EAA /* MovieData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC3830AF2897A3A500D32EAA /* MovieData.xcdatamodeld */; };
 		DC3830B32897A4F800D32EAA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830B22897A4F800D32EAA /* CoreDataManager.swift */; };
 		DC3830B62897BA4600D32EAA /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830B52897BA4600D32EAA /* MoviesModel.swift */; };
+		DC3830B82897F74700D32EAA /* FavouriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830B72897F74700D32EAA /* FavouriteRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		DC3830B02897A3A500D32EAA /* MovieData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieData.xcdatamodel; sourceTree = "<group>"; };
 		DC3830B22897A4F800D32EAA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DC3830B52897BA4600D32EAA /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
+		DC3830B72897F74700D32EAA /* FavouriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				DC38307A28943E3D00D32EAA /* FavouriteViewModel.swift */,
 				DC38307C28943E4700D32EAA /* FavouriteAssembly.swift */,
 				DC38307E28943E4F00D32EAA /* FavouriteViewController.swift */,
+				DC3830B72897F74700D32EAA /* FavouriteRouter.swift */,
 			);
 			path = Favourite;
 			sourceTree = "<group>";
@@ -278,18 +281,10 @@
 		DC3830982896A29B00D32EAA /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				DC3830992896A2A800D32EAA /* MovieCardView */,
+				DC38309A2896A2B600D32EAA /* MovieCardView.swift */,
 				DC3830AC2896D1F800D32EAA /* RatingView.swift */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		DC3830992896A2A800D32EAA /* MovieCardView */ = {
-			isa = PBXGroup;
-			children = (
-				DC38309A2896A2B600D32EAA /* MovieCardView.swift */,
-			);
-			path = MovieCardView;
 			sourceTree = "<group>";
 		};
 		DC38309F2896C15600D32EAA /* Selected */ = {
@@ -428,6 +423,7 @@
 				DC383038289422BB00D32EAA /* SceneDelegate.swift in Sources */,
 				DC3830A72896C19300D32EAA /* SelectedMovieAssembly.swift in Sources */,
 				DC38309B2896A2B600D32EAA /* MovieCardView.swift in Sources */,
+				DC3830B82897F74700D32EAA /* FavouriteRouter.swift in Sources */,
 				DC38308828966B4200D32EAA /* HTTPMethod.swift in Sources */,
 				DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */,
 				DC38307928943E3200D32EAA /* FavouriteContentView.swift in Sources */,
