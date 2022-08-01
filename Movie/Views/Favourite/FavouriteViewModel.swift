@@ -9,11 +9,19 @@ import Foundation
 
 final class FavouriteViewModel: BaseViewModel {
         
+    private let router = FavouriteRouter()
+    
     func getAllMovies() -> [SelectedMovieData] {
         CoreDataManager.shared.getAllSavedMovies()
     }
     
-    func delete(with id: Int16) {
-        CoreDataManager.shared.delete(with: id)
+    func openSelectedMovie(with movie: MoviesModel) {
+        router.openSelectedMovie(with: movie)
     }
+    
+    func tappedOnFavourite(movie: SelectedMovieData) {
+        CoreDataManager.shared.delete(with: Int16(movie.id))
+        CoreDataManager.shared.save()
+    }
+    
 }
