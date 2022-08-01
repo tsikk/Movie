@@ -11,14 +11,15 @@ struct MoviesModel: Hashable {
     private let movie: Movie
     private let firstPath = "https://image.tmdb.org/t/p/w400"
 
-    init(movie: Movie, id: Int) {
+    init(movie: Movie, id: Int, isFavourite: Bool = false) {
         self.movie = movie
         self.id = id
+        self.isFavourite = isFavourite
     }
     
+    var isFavourite: Bool
     var id: Int
-    var isFavourite = false
-
+    
     var releaseDate: String {
         movie.convertedReleaseDate() ?? "unknown"
     }
