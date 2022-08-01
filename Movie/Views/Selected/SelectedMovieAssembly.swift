@@ -9,7 +9,7 @@ import UIKit
 
 struct SelectedMovieAssembly {
     
-    static func build(with movie: Movie) -> UIViewController {
+    static func build(with movie: MoviesModel) -> UIViewController {
         
         let viewModel = SelectedMovieViewModel(with: movie)
         let view = SelectedMovieContentView(viewModel: viewModel)

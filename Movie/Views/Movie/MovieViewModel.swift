@@ -9,7 +9,7 @@ import Foundation
 
 class MovieViewModel: BaseViewModel {
     
-    @Published var movies: [Movie] = []
+    @Published var movies: [MoviesModel] = []
     private let service: MoviesServiceable
     private let router = MovieRouter()
     @Published var isFavourite = false
@@ -30,7 +30,7 @@ class MovieViewModel: BaseViewModel {
     }
     
     // MARK: Methods
-    func openSelectedMovie(with movie: Movie) {
+    func openSelectedMovie(with movie: MoviesModel) {
         router.openSelectedMovie(with: movie)
     }
     
@@ -42,7 +42,7 @@ class MovieViewModel: BaseViewModel {
         switch fetchedData {
         case .success(let response):
             DispatchQueue.main.async {
-                self.movies = response.results
+                self.movies = response.results.enumerated().map { MoviesModel(movie: $0.element, id: $0.offset) }
             }
         case .failure(_):
             //break

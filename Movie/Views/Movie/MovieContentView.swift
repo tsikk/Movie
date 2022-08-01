@@ -19,34 +19,8 @@ struct MovieContentView: View {
     
     private var listOfMovies: some View {
         List(viewModel.movies, id: \.self) { movie in
-            ZStack(alignment: .bottom) {
-                KFImage(URL(string:firstPath + movie.posterPath))
-                    .placeholder {
-                        ProgressView()
-                    }
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(minWidth: 0, maxHeight: 400)
-                HStack {
-                    Text(movie.title)
-                        .bold()
-                    Spacer()
-                    
-                    Button {
-                        viewModel.save(movie: movie)
-                    } label: {
-                        Image(systemName: isFavourite ? "star.fill" : "star")
-                            .foregroundColor(.red)
-                    }.buttonStyle(.bordered)
-                    
-                }
-                .padding()
-                .background(.thinMaterial)
-            }
-            .background(.thickMaterial)
-            .mask(RoundedRectangle(cornerRadius: 16))
-            .padding(8)
-            
+                
+             MovieCardView(movie: movie)
                 .listRowInsets(EdgeInsets())
                 .listRowSeparator(.hidden)
                 .onTapGesture {

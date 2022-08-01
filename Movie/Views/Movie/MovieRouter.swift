@@ -9,7 +9,7 @@ import Foundation
 
 class MovieRouter: BaseRouting {
     
-    func openSelectedMovie(with movie: Movie) {
+    func openSelectedMovie(with movie: MoviesModel) {
         let module = SelectedMovieAssembly.build(with: movie)
         topNavigationController?.show(module, sender: self)
     }
