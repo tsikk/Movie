@@ -30,7 +30,7 @@ struct FavouriteContentView: View {
                     Spacer()
                     
                     Button {
-                        viewModel.delete(with: movie.id)
+                        viewModel.tappedOnFavourite(movie: movie)
                     } label: {
                         Image(systemName: isFavourite ? "star.fill" : "star")
                             .foregroundColor(.red)
@@ -46,7 +46,16 @@ struct FavouriteContentView: View {
             .listRowInsets(EdgeInsets())
             .listRowSeparator(.hidden)
             .onTapGesture {
-//                $viewModel.openSelectedMovie(with: movie)
+                viewModel.openSelectedMovie(with: MoviesModel(movie: Movie(backdropPath: movie.backdropPath ?? "",
+                                                                           id: Int(movie.id),
+                                                                           overview: movie.overview ?? "",
+                                                                           popularity: movie.popularity,
+                                                                           posterPath: movie.posterPath ?? "",
+                                                                           releaseDate: movie.releaseDate ?? "",
+                                                                           title: movie.title ?? "",
+                                                                           voteAverage: movie.voteAverage,
+                                                                           voteCount: Int(movie.voteCount)),
+                                                              id: Int(movie.id)))
             }
         }
         .listStyle(.plain)
