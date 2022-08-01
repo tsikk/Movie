@@ -29,6 +29,9 @@ struct Movie: Decodable, Hashable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
+    
+    var isFavourite: Bool = false
+
 }
 
 extension Movie {
@@ -43,5 +46,6 @@ extension Movie {
         dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter.string(from: originalDate)
     }
+    
     
 }
