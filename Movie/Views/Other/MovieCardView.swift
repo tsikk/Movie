@@ -31,7 +31,7 @@ struct MovieCardView: View {
                 } label: {
                     Image(systemName: movie.isFavourite ? "star.fill" : "star")
                         .foregroundColor(.red)
-                }.buttonStyle(.bordered)
+                }.buttonStyle(.plain)
                 
             }
             .padding()

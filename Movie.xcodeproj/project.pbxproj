@@ -189,9 +189,7 @@
 		DC38306D289436A100D32EAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC38309F2896C15600D32EAA /* Selected */,
-				DC38306E289436B400D32EAA /* Movie */,
-				DC38306F289436BA00D32EAA /* Favourite */,
+				DC3830B92897FE0F00D32EAA /* Main */,
 				DC3830982896A29B00D32EAA /* Other */,
 			);
 			path = Views;
@@ -313,6 +311,16 @@
 				DC3830B52897BA4600D32EAA /* MoviesModel.swift */,
 			);
 			path = MoviesModel;
+			sourceTree = "<group>";
+		};
+		DC3830B92897FE0F00D32EAA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DC38306E289436B400D32EAA /* Movie */,
+				DC38306F289436BA00D32EAA /* Favourite */,
+				DC38309F2896C15600D32EAA /* Selected */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
