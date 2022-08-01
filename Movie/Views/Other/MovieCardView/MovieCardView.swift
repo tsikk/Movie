@@ -26,9 +26,14 @@ struct MovieCardView: View {
                 Text(movie.title)
                     .bold()
                 Spacer()
-                Image(systemName: isFavourite ? "star.fill" : "star")
-                    .foregroundColor(.red)
                 
+                Button {
+                    print("tapped on star")
+                    isFavourite.toggle()
+                } label: {
+                    Image(systemName: isFavourite ? "star.fill" : "star")
+                        .foregroundColor(.red)
+                }.buttonStyle(.bordered)
                 
             }
             .padding()
