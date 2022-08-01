@@ -45,6 +45,7 @@
 		DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A82896C2D000D32EAA /* MovieRouter.swift */; };
 		DC3830AD2896D1F800D32EAA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830AC2896D1F800D32EAA /* RatingView.swift */; };
 		DC3830B12897A3A500D32EAA /* MovieData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC3830AF2897A3A500D32EAA /* MovieData.xcdatamodeld */; };
+		DC3830B32897A4F800D32EAA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830B22897A4F800D32EAA /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		DC3830A82896C2D000D32EAA /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
 		DC3830AC2896D1F800D32EAA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		DC3830B02897A3A500D32EAA /* MovieData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieData.xcdatamodel; sourceTree = "<group>"; };
+		DC3830B22897A4F800D32EAA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				DC3830AF2897A3A500D32EAA /* MovieData.xcdatamodeld */,
+				DC3830B22897A4F800D32EAA /* CoreDataManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				DC38306928942B7500D32EAA /* RootAssembly.swift in Sources */,
 				DC38306028942AE600D32EAA /* ViewModeling.swift in Sources */,
 				DC38307F28943E4F00D32EAA /* FavouriteViewController.swift in Sources */,
+				DC3830B32897A4F800D32EAA /* CoreDataManager.swift in Sources */,
 				DC38309428966F8200D32EAA /* MoviesService.swift in Sources */,
 				DC38307328943E1700D32EAA /* MovieViewModel.swift in Sources */,
 				DC38308628966B3B00D32EAA /* HTTPClient.swift in Sources */,
