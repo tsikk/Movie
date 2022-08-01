@@ -31,3 +31,17 @@ struct Movie: Decodable, Hashable {
     }
 }
 
+extension Movie {
+    func convertedReleaseDate() -> String? {
+        // original format: yyyy-MM-dd
+        let originalDateString = releaseDate
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let originalDate = dateFormatter.date(from: originalDateString) else { return nil }
+        
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        return dateFormatter.string(from: originalDate)
+    }
+    
+}

@@ -43,6 +43,7 @@
 		DC3830A52896C17D00D32EAA /* SelectedMovieContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A42896C17D00D32EAA /* SelectedMovieContentView.swift */; };
 		DC3830A72896C19300D32EAA /* SelectedMovieAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A62896C19300D32EAA /* SelectedMovieAssembly.swift */; };
 		DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A82896C2D000D32EAA /* MovieRouter.swift */; };
+		DC3830AD2896D1F800D32EAA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830AC2896D1F800D32EAA /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		DC3830A42896C17D00D32EAA /* SelectedMovieContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMovieContentView.swift; sourceTree = "<group>"; };
 		DC3830A62896C19300D32EAA /* SelectedMovieAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMovieAssembly.swift; sourceTree = "<group>"; };
 		DC3830A82896C2D000D32EAA /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
+		DC3830AC2896D1F800D32EAA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				DC3830992896A2A800D32EAA /* MovieCardView */,
+				DC3830AC2896D1F800D32EAA /* RatingView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				DC38307128943E0700D32EAA /* MovieContentView.swift in Sources */,
 				DC38305628942A4A00D32EAA /* BaseRouting.swift in Sources */,
 				DC383036289422BB00D32EAA /* AppDelegate.swift in Sources */,
+				DC3830AD2896D1F800D32EAA /* RatingView.swift in Sources */,
 				DC38307528943E2000D32EAA /* MovieViewController.swift in Sources */,
 				DC38306728942B6B00D32EAA /* RootViewModel.swift in Sources */,
 				DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */,
