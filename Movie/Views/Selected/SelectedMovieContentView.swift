@@ -23,7 +23,7 @@ struct SelectedMovieContentView: View {
                     .frame(minWidth: 0, maxHeight: 200)
                 
                 HStack {
-                    RatingView(rating: viewModel.movie.voteCount)
+                    RatingView(rating: viewModel.movie.voteAverage)
                     Spacer()
                     Image(systemName: "star")
                 }

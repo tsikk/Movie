@@ -47,6 +47,10 @@ struct MoviesModel: Hashable {
         movie.voteCount
     }
     
+    var voteAverage: Int {
+        Int(movie.voteAverage / 2)
+    }
+    
     var popularity: Double {
         movie.popularity
     }

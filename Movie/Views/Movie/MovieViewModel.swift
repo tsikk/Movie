@@ -50,7 +50,7 @@ class MovieViewModel: BaseViewModel {
         }
     }
     
-    func save(movie: Movie) {
+    func save(movie: MoviesModel) {
         CoreDataManager.shared.getAllSavedMovies().forEach { savedMovie in
             if savedMovie.id == movie.id { return }
         }
@@ -59,9 +59,9 @@ class MovieViewModel: BaseViewModel {
         savedMovie.id = Int16(movie.id)
         savedMovie.overview = movie.overview
         savedMovie.releaseDate = movie.releaseDate
-        savedMovie.voteAverage = movie.voteAverage
-        savedMovie.backdropPath = movie.backdropPath
-        savedMovie.posterPath = movie.posterPath
+        savedMovie.voteAverage = Double(movie.voteCount)
+        savedMovie.backdropPath = movie.posterURL
+        savedMovie.posterPath = movie.bannerURL
         savedMovie.title = movie.title
         savedMovie.popularity = movie.popularity
         savedMovie.voteCount = Int16(movie.voteCount)
