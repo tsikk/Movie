@@ -10,7 +10,7 @@ import Kingfisher
 
 struct MovieCardView: View {
     var movie: MoviesModel
-    var viewModel: MovieViewModel
+    var viewModel: BaseViewModel
     
     var body: some View {
         ZStack(alignment: .bottom) {

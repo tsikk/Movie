@@ -5,7 +5,6 @@
 //  Created by Ilia Tsikelashvili on 29.07.22.
 //
 
-import Combine
 import Foundation
 
 class BaseViewModel: ViewModeling, ObservableObject {
@@ -61,4 +60,9 @@ class BaseViewModel: ViewModeling, ObservableObject {
             self.didChangeLoadingTo?(isLoading)
         }
     }
+    
+    func tappedOnFavourite(movie: MoviesModel) {
+        // needs to be overriden
+    }
+
 }

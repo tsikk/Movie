@@ -57,7 +57,7 @@ class MovieViewModel: BaseViewModel {
         }
     }
     
-    func tappedOnFavourite(movie: MoviesModel) {
+    override func tappedOnFavourite(movie: MoviesModel) {
         movies[movie.id].isFavourite.toggle()
         
         if !movies[movie.id].isFavourite {
