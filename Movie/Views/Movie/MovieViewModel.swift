@@ -43,6 +43,14 @@ class MovieViewModel: BaseViewModel {
         case .success(let response):
             DispatchQueue.main.async {
                 self.movies = response.results.enumerated().map { MoviesModel(movie: $0.element, id: $0.offset) }
+                
+                for index in 0..<self.movies.count {
+                    CoreDataManager.shared.getAllSavedMovies().forEach { movie in
+                        if self.movies[index].id == movie.id {
+                            self.movies[index].isFavourite = true
+                        }
+                    }
+                }
             }
         case .failure(_):
             //break
@@ -50,21 +58,24 @@ class MovieViewModel: BaseViewModel {
         }
     }
     
-    func save(movie: MoviesModel) {
-        CoreDataManager.shared.getAllSavedMovies().forEach { savedMovie in
-            if savedMovie.id == movie.id { return }
-        }
+    func tappedOnFavourite(movie: MoviesModel) {
+        movies[movie.id].isFavourite.toggle()
         
-        let savedMovie = SelectedMovieData(context: CoreDataManager.shared.viewContext)
-        savedMovie.id = Int16(movie.id)
-        savedMovie.overview = movie.overview
-        savedMovie.releaseDate = movie.releaseDate
-        savedMovie.voteAverage = Double(movie.voteCount)
-        savedMovie.backdropPath = movie.posterURL
-        savedMovie.posterPath = movie.bannerURL
-        savedMovie.title = movie.title
-        savedMovie.popularity = movie.popularity
-        savedMovie.voteCount = Int16(movie.voteCount)
+        if !movies[movie.id].isFavourite {
+            CoreDataManager.shared.delete(with: Int16(movie.id))
+        } else {
+            let savedMovie = SelectedMovieData(context: CoreDataManager.shared.viewContext)
+            savedMovie.id = Int16(movie.id)
+            savedMovie.overview = movie.overview
+            savedMovie.releaseDate = movie.releaseDate
+            savedMovie.voteAverage = Double(movie.voteCount)
+            savedMovie.backdropPath = movie.posterURL
+            savedMovie.posterPath = movie.bannerURL
+            savedMovie.title = movie.title
+            savedMovie.popularity = movie.popularity
+            savedMovie.voteCount = Int16(movie.voteCount)
+        }
+        CoreDataManager.shared.save()
     }
     
     private func fetchData() async -> Result<TopRated, RequestError>{

@@ -20,7 +20,7 @@ struct MovieContentView: View {
     private var listOfMovies: some View {
         List(viewModel.movies, id: \.self) { movie in
                 
-             MovieCardView(movie: movie)
+            MovieCardView(movie: movie, viewModel: viewModel)
                 .listRowInsets(EdgeInsets())
                 .listRowSeparator(.hidden)
                 .onTapGesture {
