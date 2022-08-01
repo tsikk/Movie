@@ -6,31 +6,50 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SelectedMovieContentView: View {
     @ObservedObject var viewModel: SelectedMovieViewModel
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
+            ZStack(alignment: .bottom) {
+                KFImage(viewModel.posterURL)
+                    .placeholder {
+                        ProgressView()
+                    }
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(minWidth: 0, maxHeight: 200)
+                
+                HStack {
+                    RatingView(rating: viewModel.rating)
+                    Spacer()
+                    Image(systemName: "star")
+                }
+                .padding(8)
+                .background(.thinMaterial)
+            }
+            .background(.thickMaterial)
+            .mask(RoundedRectangle(cornerRadius: 16))
+            
+            VStack(alignment: .leading, spacing: 16) {
+                
+                Text("Release Date: \(viewModel.releaseDate)")
+                    .bold()
+                    .font(.headline)
+                    .foregroundColor(.black)
+                
+                ScrollView {
+                    Text(viewModel.overview)
+                        .bold()
+                        .font(.title)
+                        .foregroundColor(.black)
+                }
+            }.padding()
+            
             Spacer()
-            Text(viewModel.movie.title)
-                .bold()
-                .font(.title)
-                .foregroundColor(.red)
-            Spacer()
-            Text(viewModel.movie.overview)
-                .bold()
-                .font(.callout)
-                .foregroundColor(.red)
-            Spacer()
-            Text(viewModel.movie.releaseDate)
-                .bold()
-                .font(.headline)
-                .foregroundColor(.red)
-            Spacer()
-            Spacer()
-        }
-        
+        }.padding(.top, 16)
     }
 }
 
