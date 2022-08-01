@@ -51,9 +51,15 @@ class MovieViewModel: BaseViewModel {
                     }
                 }
             }
-        case .failure(_):
-            //break
-            break
+        case .failure(let error):
+            switch error {
+            case .unauthorized:
+                router.createAlertForFetching(title: "User is not authorized")
+            case .invalidURL:
+                router.createAlertForFetching(title: "Invalid URL")
+            case .decode, .noResponse,.unexpectedStatusCode, .unknown:
+                router.createAlertForFetching(title: "Something went worng")
+            }
         }
     }
     
