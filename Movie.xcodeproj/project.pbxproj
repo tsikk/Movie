@@ -23,12 +23,10 @@
 		DC38306C289431EB00D32EAA /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38306B289431EB00D32EAA /* UIViewController+Helper.swift */; };
 		DC38307128943E0700D32EAA /* MovieContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307028943E0700D32EAA /* MovieContentView.swift */; };
 		DC38307328943E1700D32EAA /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307228943E1700D32EAA /* MovieViewModel.swift */; };
-		DC38307528943E2000D32EAA /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307428943E2000D32EAA /* MovieViewController.swift */; };
 		DC38307728943E2900D32EAA /* MovieAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307628943E2900D32EAA /* MovieAssembly.swift */; };
 		DC38307928943E3200D32EAA /* FavouriteContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307828943E3200D32EAA /* FavouriteContentView.swift */; };
 		DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307A28943E3D00D32EAA /* FavouriteViewModel.swift */; };
 		DC38307D28943E4700D32EAA /* FavouriteAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307C28943E4700D32EAA /* FavouriteAssembly.swift */; };
-		DC38307F28943E4F00D32EAA /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38307E28943E4F00D32EAA /* FavouriteViewController.swift */; };
 		DC38308428966B3000D32EAA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308328966B3000D32EAA /* Endpoint.swift */; };
 		DC38308628966B3B00D32EAA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308528966B3B00D32EAA /* HTTPClient.swift */; };
 		DC38308828966B4200D32EAA /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC38308728966B4200D32EAA /* HTTPMethod.swift */; };
@@ -69,12 +67,10 @@
 		DC38306B289431EB00D32EAA /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
 		DC38307028943E0700D32EAA /* MovieContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContentView.swift; sourceTree = "<group>"; };
 		DC38307228943E1700D32EAA /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
-		DC38307428943E2000D32EAA /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		DC38307628943E2900D32EAA /* MovieAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAssembly.swift; sourceTree = "<group>"; };
 		DC38307828943E3200D32EAA /* FavouriteContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteContentView.swift; sourceTree = "<group>"; };
 		DC38307A28943E3D00D32EAA /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		DC38307C28943E4700D32EAA /* FavouriteAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteAssembly.swift; sourceTree = "<group>"; };
-		DC38307E28943E4F00D32EAA /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DC38308328966B3000D32EAA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		DC38308528966B3B00D32EAA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		DC38308728966B4200D32EAA /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -200,7 +196,6 @@
 			children = (
 				DC38307028943E0700D32EAA /* MovieContentView.swift */,
 				DC38307228943E1700D32EAA /* MovieViewModel.swift */,
-				DC38307428943E2000D32EAA /* MovieViewController.swift */,
 				DC38307628943E2900D32EAA /* MovieAssembly.swift */,
 				DC3830A82896C2D000D32EAA /* MovieRouter.swift */,
 			);
@@ -213,7 +208,6 @@
 				DC38307828943E3200D32EAA /* FavouriteContentView.swift */,
 				DC38307A28943E3D00D32EAA /* FavouriteViewModel.swift */,
 				DC38307C28943E4700D32EAA /* FavouriteAssembly.swift */,
-				DC38307E28943E4F00D32EAA /* FavouriteViewController.swift */,
 				DC3830B72897F74700D32EAA /* FavouriteRouter.swift */,
 			);
 			path = Favourite;
@@ -405,7 +399,6 @@
 				DC38306928942B7500D32EAA /* RootAssembly.swift in Sources */,
 				DC3830B62897BA4600D32EAA /* MoviesModel.swift in Sources */,
 				DC38306028942AE600D32EAA /* ViewModeling.swift in Sources */,
-				DC38307F28943E4F00D32EAA /* FavouriteViewController.swift in Sources */,
 				DC3830B32897A4F800D32EAA /* CoreDataManager.swift in Sources */,
 				DC38309428966F8200D32EAA /* MoviesService.swift in Sources */,
 				DC38307328943E1700D32EAA /* MovieViewModel.swift in Sources */,
@@ -420,7 +413,6 @@
 				DC38305628942A4A00D32EAA /* BaseRouting.swift in Sources */,
 				DC383036289422BB00D32EAA /* AppDelegate.swift in Sources */,
 				DC3830AD2896D1F800D32EAA /* RatingView.swift in Sources */,
-				DC38307528943E2000D32EAA /* MovieViewController.swift in Sources */,
 				DC38306728942B6B00D32EAA /* RootViewModel.swift in Sources */,
 				DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */,
 				DC38306528942B6000D32EAA /* RootViewController.swift in Sources */,

@@ -10,6 +10,26 @@ import Foundation
 final class FavouriteViewModel: BaseViewModel {
         
     private let router = FavouriteRouter()
+    var movies = [MoviesModel]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getAllMovies().forEach { savedMovie in
+            movies.append(.init(movie: Movie(backdropPath: savedMovie.backdropPath ?? "",
+                                             id: Int(savedMovie.id),
+                                             overview: savedMovie.overview ?? "",
+                                             popularity: savedMovie.popularity,
+                                             posterPath: savedMovie.posterPath ?? "",
+                                             releaseDate: savedMovie.releaseDate ?? "Unknown",
+                                             title: savedMovie.title ?? "Unknown",
+                                             voteAverage: savedMovie.voteAverage,
+                                             voteCount: Int(savedMovie.voteCount)),
+                                id: Int(savedMovie.id),
+                                isFavourite: true))
+        }
+        
+    }
     
     func getAllMovies() -> [SelectedMovieData] {
         CoreDataManager.shared.getAllSavedMovies()
@@ -19,7 +39,7 @@ final class FavouriteViewModel: BaseViewModel {
         router.openSelectedMovie(with: movie)
     }
     
-    func tappedOnFavourite(movie: SelectedMovieData) {
+    override func tappedOnFavourite(movie: MoviesModel) {
         CoreDataManager.shared.delete(with: Int16(movie.id))
         CoreDataManager.shared.save()
     }
