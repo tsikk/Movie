@@ -57,8 +57,8 @@ fileprivate extension UIViewController {
 
     var wrapped: UIViewController {
         let navigationController = UINavigationController(rootViewController: self)
-        navigationController.navigationBar.tintColor = .black
-        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.prefersLargeTitles = false
         navigationController.navigationBar.isTranslucent = true
 
         return navigationController
