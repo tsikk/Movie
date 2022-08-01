@@ -81,17 +81,4 @@ class MovieViewModel: BaseViewModel {
             await service.getTopRated()
     }
     
-    private func showDetail(_ movie: Movie) {
-        
-        Task(priority: .background) {
-            
-            let result = await service.getMovieDetail(id: movie.id)
-            switch result {
-            case .success( _): break
-                // must be configured
-            case .failure( _): break
-                // must be configured
-            }
-        }
-    }
 }
