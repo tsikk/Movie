@@ -10,8 +10,6 @@ import Kingfisher
 
 struct MovieContentView: View {
     @ObservedObject var viewModel: MovieViewModel
-    let firstPath = "https://image.tmdb.org/t/p/w400"
-    @State var isFavourite = false
 
     var body: some View {
             listOfMovies

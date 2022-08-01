@@ -12,7 +12,6 @@ class MovieViewModel: BaseViewModel {
     @Published var movies: [MoviesModel] = []
     private let service: MoviesServiceable
     private let router = MovieRouter()
-    @Published var isFavourite = false
     
     init(service: MoviesServiceable) {
         self.service = service
