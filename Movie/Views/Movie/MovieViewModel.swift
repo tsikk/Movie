@@ -12,6 +12,7 @@ class MovieViewModel: BaseViewModel {
     @Published var movies: [Movie] = []
     private let service: MoviesServiceable
     private let router = MovieRouter()
+    @Published var isFavourite = false
     
     init(service: MoviesServiceable) {
         self.service = service
@@ -47,6 +48,23 @@ class MovieViewModel: BaseViewModel {
             //break
             break
         }
+    }
+    
+    func save(movie: Movie) {
+        CoreDataManager.shared.getAllSavedMovies().forEach { savedMovie in
+            if savedMovie.id == movie.id { return }
+        }
+        
+        let savedMovie = SelectedMovieData(context: CoreDataManager.shared.viewContext)
+        savedMovie.id = Int16(movie.id)
+        savedMovie.overview = movie.overview
+        savedMovie.releaseDate = movie.releaseDate
+        savedMovie.voteAverage = movie.voteAverage
+        savedMovie.backdropPath = movie.backdropPath
+        savedMovie.posterPath = movie.posterPath
+        savedMovie.title = movie.title
+        savedMovie.popularity = movie.popularity
+        savedMovie.voteCount = Int16(movie.voteCount)
     }
     
     private func fetchData() async -> Result<TopRated, RequestError>{
