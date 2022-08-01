@@ -7,12 +7,12 @@
 
 import UIKit
 
-class MovieViewController: BaseTabRootViewController<MovieViewModel, MovieContentView> {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-}
+//class MovieViewController: BaseTabRootViewController<MovieViewModel, MovieContentView> {
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Do any additional setup after loading the view.
+//    }
+//
+//}

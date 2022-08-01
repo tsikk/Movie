@@ -7,12 +7,12 @@
 
 import UIKit
 
-class FavouriteViewController: BaseTabRootViewController<FavouriteViewModel, FavouriteContentView>  {
+//class FavouriteViewController: BaseTabRootViewController<FavouriteViewModel, FavouriteContentView>  {
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Do any additional setup after loading the view.
+//    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-}
+//}

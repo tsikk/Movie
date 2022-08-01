@@ -13,8 +13,7 @@ struct MovieAssembly {
         
         let viewModel = MovieViewModel(service: MoviesService())
         let view = MovieContentView(viewModel: viewModel)
-        let controller = MovieViewController(rootView: view)
-        controller.navigationController?.navigationBar.prefersLargeTitles = true
+        let controller = BaseTabRootViewController<MovieViewModel, MovieContentView>(rootView: view)
         controller.viewModel = viewModel
         controller.title = "Movies"
         controller.tabBarItem = TabFactory.barItem(for: .movie)
