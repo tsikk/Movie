@@ -44,6 +44,7 @@
 		DC3830A72896C19300D32EAA /* SelectedMovieAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A62896C19300D32EAA /* SelectedMovieAssembly.swift */; };
 		DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830A82896C2D000D32EAA /* MovieRouter.swift */; };
 		DC3830AD2896D1F800D32EAA /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830AC2896D1F800D32EAA /* RatingView.swift */; };
+		DC3830B12897A3A500D32EAA /* MovieData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC3830AF2897A3A500D32EAA /* MovieData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		DC3830A62896C19300D32EAA /* SelectedMovieAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMovieAssembly.swift; sourceTree = "<group>"; };
 		DC3830A82896C2D000D32EAA /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
 		DC3830AC2896D1F800D32EAA /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		DC3830B02897A3A500D32EAA /* MovieData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +120,12 @@
 		DC383034289422BB00D32EAA /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				DC3830AE2897A38100D32EAA /* Manager */,
 				DC38308128966B0A00D32EAA /* Network */,
 				DC38306D289436A100D32EAA /* Views */,
 				DC38306A289431D800D32EAA /* Helpers */,
 				DC38304A2894267700D32EAA /* Business Logic */,
 				DC3830492894235C00D32EAA /* App */,
-				DC38303E289422BC00D32EAA /* Assets.xcassets */,
 				DC383043289422BC00D32EAA /* Info.plist */,
 			);
 			path = Movie;
@@ -132,6 +134,7 @@
 		DC3830492894235C00D32EAA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				DC38303E289422BC00D32EAA /* Assets.xcassets */,
 				DC383040289422BC00D32EAA /* LaunchScreen.storyboard */,
 				DC383035289422BB00D32EAA /* AppDelegate.swift */,
 				DC383037289422BB00D32EAA /* SceneDelegate.swift */,
@@ -295,6 +298,14 @@
 			path = Selected;
 			sourceTree = "<group>";
 		};
+		DC3830AE2897A38100D32EAA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DC3830AF2897A3A500D32EAA /* MovieData.xcdatamodeld */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,6 +416,7 @@
 				DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */,
 				DC38307928943E3200D32EAA /* FavouriteContentView.swift in Sources */,
 				DC38308E28966B6600D32EAA /* MoviesEndpoint.swift in Sources */,
+				DC3830B12897A3A500D32EAA /* MovieData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +643,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DC3830AF2897A3A500D32EAA /* MovieData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC3830B02897A3A500D32EAA /* MovieData.xcdatamodel */,
+			);
+			currentVersion = DC3830B02897A3A500D32EAA /* MovieData.xcdatamodel */;
+			path = MovieData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DC38302A289422BB00D32EAA /* Project object */;
 }
