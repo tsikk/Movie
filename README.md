@@ -1,7 +1,6 @@
 # Movie
 
 ![Simulator Screen Recording - iPhone 13 Pro - 2022-08-02 at 10 38 06](https://user-images.githubusercontent.com/84790229/182315224-773e281e-4c85-448e-87ee-64372e4733de.gif)
-<img src="https://user-images.githubusercontent.com/84790229/182310472-9e15b9e8-196d-4867-a59c-90a1edbf0469.png" width="250" height="440">
 
 Project is built with MVVM+UIKit+SwiftUI, reason for UIKit + SwiftUI interoperability. Given the benefits of using SwiftUI for future development, it will be a common requirement to integrate the new SwiftUI app functionality with the existing project codebase. Fortunately, this integration is achieved easily using UIHostingController.
 
