@@ -44,7 +44,7 @@ class MovieViewModel: BaseViewModel {
                 self.movies = response.results.enumerated().map { MoviesModel(movie: $0.element, id: $0.offset) }
                 
                 for index in 0..<self.movies.count {
-                    CoreDataManager.shared.getAllSavedMovies().forEach { movie in
+                    CoreDataManager.shared.savedEntities.forEach { movie in
                         if self.movies[index].id == movie.id {
                             self.movies[index].isFavourite = true
                         }
@@ -64,23 +64,13 @@ class MovieViewModel: BaseViewModel {
     }
     
     override func tappedOnFavourite(movie: MoviesModel) {
-        movies[movie.id].isFavourite.toggle()
-        
         if !movies[movie.id].isFavourite {
             CoreDataManager.shared.delete(with: Int16(movie.id))
         } else {
-            let savedMovie = SelectedMovieData(context: CoreDataManager.shared.viewContext)
-            savedMovie.id = Int16(movie.id)
-            savedMovie.overview = movie.overview
-            savedMovie.releaseDate = movie.releaseDate
-            savedMovie.voteAverage = Double(movie.voteCount)
-            savedMovie.backdropPath = movie.posterURL
-            savedMovie.posterPath = movie.bannerURL
-            savedMovie.title = movie.title
-            savedMovie.popularity = movie.popularity
-            savedMovie.voteCount = Int16(movie.voteCount)
+            CoreDataManager.shared.addMovie(with: movie)
         }
-        CoreDataManager.shared.save()
+        movies[movie.id].isFavourite.toggle()
+
     }
     
     private func fetchData() async -> Result<TopRated, RequestError>{

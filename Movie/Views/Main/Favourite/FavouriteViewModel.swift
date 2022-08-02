@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 final class FavouriteViewModel: BaseViewModel {
         
@@ -15,7 +16,11 @@ final class FavouriteViewModel: BaseViewModel {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getAllMovies().forEach { savedMovie in
+        getSavedMovies()
+    }
+    
+    func getSavedMovies() {
+        CoreDataManager.shared.savedEntities.forEach { savedMovie in
             movies.append(.init(movie: Movie(backdropPath: savedMovie.backdropPath ?? "",
                                              id: Int(savedMovie.id),
                                              overview: savedMovie.overview ?? "",
@@ -28,11 +33,6 @@ final class FavouriteViewModel: BaseViewModel {
                                 id: Int(savedMovie.id),
                                 isFavourite: true))
         }
-        
-    }
-    
-    func getAllMovies() -> [SelectedMovieData] {
-        CoreDataManager.shared.getAllSavedMovies()
     }
     
     func openSelectedMovie(with movie: MoviesModel) {
@@ -40,8 +40,7 @@ final class FavouriteViewModel: BaseViewModel {
     }
     
     override func tappedOnFavourite(movie: MoviesModel) {
-        CoreDataManager.shared.delete(with: Int16(movie.id))
-        CoreDataManager.shared.save()
+
     }
     
 }

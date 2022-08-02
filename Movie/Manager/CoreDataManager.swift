@@ -11,44 +11,61 @@ import CoreData
 class CoreDataManager {
     
     static let shared = CoreDataManager()
+
+    let container: NSPersistentContainer
+    @Published var savedEntities: [SelectedMovieData] = []
     
-    let persistentContainer: NSPersistentContainer
-    
-    var viewContext: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
-    
-    private init() {
-        persistentContainer = NSPersistentContainer(name: "MovieData")
-        persistentContainer.loadPersistentStores { (description, error) in
+    init() {
+        container = NSPersistentContainer(name: "MovieData")
+        container.loadPersistentStores { description, error  in
             if let error = error {
-                print("Error: \(error)")
+                fatalError("unable to confiure core data \(error )")
             }
         }
+        
+        fetchMovie()
     }
-
-    func getAllSavedMovies() -> [SelectedMovieData] {
-        let request: NSFetchRequest<SelectedMovieData>  = SelectedMovieData.fetchRequest()
+    
+    func fetchMovie() {
+        let request = NSFetchRequest<SelectedMovieData>(entityName: "SelectedMovieData")
         do {
-            return try viewContext.fetch(request)
-        } catch {
-            return []
+           savedEntities = try container.viewContext.fetch(request)
+        } catch let error {
+            print("\(error)")
         }
     }
     
-    func save() {
+    func addMovie(with movie: MoviesModel) {
+        let newMovie = SelectedMovieData(context: container.viewContext)
+        
+        newMovie.id = Int16(movie.id)
+        newMovie.overview = movie.overview
+        newMovie.releaseDate = movie.releaseDate
+        newMovie.voteAverage = Double(movie.voteCount)
+        newMovie.backdropPath = movie.posterURL
+        newMovie.posterPath = movie.bannerURL
+        newMovie.title = movie.title
+        newMovie.popularity = movie.popularity
+        newMovie .voteCount = Int16(movie.voteCount)
+        
+        saveData()
+    }
+    
+    func saveData() {
         do {
-            try viewContext.save()
-        } catch {
-            print("error ")
+            try container.viewContext.save()
+            fetchMovie()
+        } catch let error {
+            fatalError("Error Saving. \(error)")
         }
     }
     
     func delete(with id: Int16) {
-        getAllSavedMovies().forEach { savedMovie in
+        savedEntities.forEach { savedMovie in
             if savedMovie.id == id {
-                viewContext.delete(savedMovie)
+                container.viewContext.delete(savedMovie)
             }
         }
+        saveData()
     }
 }
