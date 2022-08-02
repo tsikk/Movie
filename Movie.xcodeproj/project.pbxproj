@@ -48,6 +48,10 @@
 		DC3830B82897F74700D32EAA /* FavouriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830B72897F74700D32EAA /* FavouriteRouter.swift */; };
 		DC3830BB2898EC2900D32EAA /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830BA2898EC2900D32EAA /* String+Helper.swift */; };
 		DC3830BF2898ECDD00D32EAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC3830C12898ECDD00D32EAA /* Localizable.strings */; };
+		DC3830C32898F19300D32EAA /* MovieColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830C22898F19200D32EAA /* MovieColors.swift */; };
+		DC3830C52898F24A00D32EAA /* Color+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830C42898F24A00D32EAA /* Color+Helper.swift */; };
+		DC3830C72898F29500D32EAA /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3830C62898F29500D32EAA /* UIColor+Helper.swift */; };
+		DC3830C92898F3C100D32EAA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3830C82898F3C100D32EAA /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +97,10 @@
 		DC3830B72897F74700D32EAA /* FavouriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRouter.swift; sourceTree = "<group>"; };
 		DC3830BA2898EC2900D32EAA /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 		DC3830C02898ECDD00D32EAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC3830C22898F19200D32EAA /* MovieColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieColors.swift; sourceTree = "<group>"; };
+		DC3830C42898F24A00D32EAA /* Color+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Helper.swift"; sourceTree = "<group>"; };
+		DC3830C62898F29500D32EAA /* UIColor+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
+		DC3830C82898F3C100D32EAA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,7 @@
 		DC3830492894235C00D32EAA /* App */ = {
 			isa = PBXGroup;
 			children = (
+				DC3830C82898F3C100D32EAA /* Colors.xcassets */,
 				DC38303E289422BC00D32EAA /* Assets.xcassets */,
 				DC383040289422BC00D32EAA /* LaunchScreen.storyboard */,
 				DC383035289422BB00D32EAA /* AppDelegate.swift */,
@@ -184,6 +193,9 @@
 			children = (
 				DC38306B289431EB00D32EAA /* UIViewController+Helper.swift */,
 				DC3830BA2898EC2900D32EAA /* String+Helper.swift */,
+				DC3830C42898F24A00D32EAA /* Color+Helper.swift */,
+				DC3830C22898F19200D32EAA /* MovieColors.swift */,
+				DC3830C62898F29500D32EAA /* UIColor+Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -396,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC383042289422BC00D32EAA /* LaunchScreen.storyboard in Resources */,
+				DC3830C92898F3C100D32EAA /* Colors.xcassets in Resources */,
 				DC3830BF2898ECDD00D32EAA /* Localizable.strings in Resources */,
 				DC38303F289422BC00D32EAA /* Assets.xcassets in Resources */,
 			);
@@ -431,6 +444,8 @@
 				DC38306728942B6B00D32EAA /* RootViewModel.swift in Sources */,
 				DC3830A92896C2D000D32EAA /* MovieRouter.swift in Sources */,
 				DC38306528942B6000D32EAA /* RootViewController.swift in Sources */,
+				DC3830C72898F29500D32EAA /* UIColor+Helper.swift in Sources */,
+				DC3830C52898F24A00D32EAA /* Color+Helper.swift in Sources */,
 				DC38309628966FDA00D32EAA /* TopRated.swift in Sources */,
 				DC38305828942A5B00D32EAA /* BaseViewModel.swift in Sources */,
 				DC3830BB2898EC2900D32EAA /* String+Helper.swift in Sources */,
@@ -440,6 +455,7 @@
 				DC3830A72896C19300D32EAA /* SelectedMovieAssembly.swift in Sources */,
 				DC38309B2896A2B600D32EAA /* MovieCardView.swift in Sources */,
 				DC3830B82897F74700D32EAA /* FavouriteRouter.swift in Sources */,
+				DC3830C32898F19300D32EAA /* MovieColors.swift in Sources */,
 				DC38308828966B4200D32EAA /* HTTPMethod.swift in Sources */,
 				DC38307B28943E3D00D32EAA /* FavouriteViewModel.swift in Sources */,
 				DC38307928943E3200D32EAA /* FavouriteContentView.swift in Sources */,

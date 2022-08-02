@@ -37,13 +37,13 @@ struct SelectedMovieContentView: View {
                 Text("SelectedMovie.ReleaseDate".localized() + viewModel.movie.releaseDate)
                     .bold()
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.titleColor)
                 
                 ScrollView {
                     Text(viewModel.movie.overview)
                         .bold()
                         .font(.title)
-                        .foregroundColor(.white)
+                        .foregroundColor(.titleColor)
                 }
             }
             .padding()

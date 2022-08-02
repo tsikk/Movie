@@ -16,7 +16,7 @@ class RootViewController<ViewModelType: ViewModeling>: UITabBarController {
         super.init(nibName: nil, bundle: nil)
         self.initialSetup()
         self.setViewControllers(modules, animated: false)
-        self.tabBar.tintColor = .red
+        self.tabBar.tintColor = .tabBarColor
         self.tabBar.scrollEdgeAppearance = UITabBarAppearance(barAppearance: self.tabBar.standardAppearance)
     }
 

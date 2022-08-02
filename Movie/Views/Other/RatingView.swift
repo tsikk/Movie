@@ -29,7 +29,7 @@ struct RatingView: View {
             
             Text("\(rating)" + "Rating.MaximumPoint".localized())
                 .bold()
-                .foregroundColor(.white)
+                .foregroundColor(.titleColor)
         }
     }
     

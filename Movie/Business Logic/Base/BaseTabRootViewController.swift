@@ -9,8 +9,6 @@ import SwiftUI
 
 class BaseTabRootViewController<ViewModelType: ViewModeling, ViewType: View>: BaseViewController<ViewModelType, ViewType> {
 
-    // MARK: - properties
-
     // MARK: - Life Cycle
 
     override func initialSetup() {
@@ -21,9 +19,8 @@ class BaseTabRootViewController<ViewModelType: ViewModeling, ViewType: View>: Ba
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        navigationController?.navigationBar.barTintColor = .red
+        navigationController?.navigationBar.barTintColor = .tabBarColor
     }
 
-    // MARK: - Public
 
 }

@@ -30,7 +30,7 @@ struct MovieCardView: View {
                     viewModel.tappedOnFavourite(movie: movie)
                 } label: {
                     Image(systemName: movie.isFavourite ? "star.fill" : "star")
-                        .foregroundColor(.red)
+                        .foregroundColor(.tabBarColor)
                 }.buttonStyle(.plain)
                 
             }
