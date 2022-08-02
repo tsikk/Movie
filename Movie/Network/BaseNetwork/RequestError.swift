@@ -18,11 +18,11 @@ enum RequestError: Error {
     var customMessage: String {
         switch self {
         case .decode:
-            return "Decode error"
+            return "RequestError.CustomMessage.Decode".localized()
         case .unauthorized:
-            return "Session expired"
+            return "RequestError.CustomMessage.Unauthorized".localized()
         default:
-            return "Unknown error"
+            return "RequestError.CustomMessage.Default".localized()
         }
     }
 }

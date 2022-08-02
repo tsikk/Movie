@@ -25,7 +25,6 @@ struct SelectedMovieContentView: View {
                 HStack {
                     RatingView(rating: viewModel.movie.voteAverage)
                     Spacer()
-                    Image(systemName: "star")
                 }
                 .padding(8)
                 .background(.thinMaterial)
@@ -35,7 +34,7 @@ struct SelectedMovieContentView: View {
             
             VStack(alignment: .leading, spacing: 16) {
                 
-                Text("Release Date: \(viewModel.movie.releaseDate)")
+                Text("SelectedMovie.ReleaseDate".localized() + viewModel.movie.releaseDate)
                     .bold()
                     .font(.headline)
                     .foregroundColor(.white)

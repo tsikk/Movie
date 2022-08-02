@@ -15,7 +15,7 @@ struct FavouriteAssembly {
         let view = FavouriteContentView(viewModel: viewModel)
         let controller = BaseTabRootViewController<FavouriteViewModel, FavouriteContentView>(rootView: view)
         controller.viewModel = viewModel
-        controller.title = "Favourite"
+        controller.title = "Tab.Favourite.Title".localized()
         controller.tabBarItem = TabFactory.barItem(for: .favourite)
         return controller
     }

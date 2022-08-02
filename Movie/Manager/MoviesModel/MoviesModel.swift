@@ -21,7 +21,7 @@ struct MoviesModel: Hashable {
     var id: Int
     
     var releaseDate: String {
-        movie.convertedReleaseDate() ?? "unknown"
+        movie.convertedReleaseDate() ?? "Movie.ReleaseDate.Unknown".localized()
     }
     
     var rating: Int {

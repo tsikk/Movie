@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Movie
+
+  Created by Ilia Tsikelashvili on 02.08.22.
+  
+*/
+
+//MARK: Tabs
+"Tab.Movie.Title" = "Movies";
+"Tab.Favourite.Title" = "Favourite";
+
+//MARK: Movie
+"Movie.ReleaseDate.Unknown" = "Unknown";
+"Movie.Alert.Unauthorized" = "User is not authorized";
+"Movie.Alert.InvalidURL" = "Invalid URL";
+"Movie.Alert.Default" = "Something went worng";
+"Movie.Alert.Button.Ok" = "Ok";
+
+//MARK: Request Error
+"RequestError.CustomMessage.Decode" = "Decode error";
+"RequestError.CustomMessage.Unauthorized" = "Session Expired";
+"RequestError.CustomMessage.Default" = "Unknown Error";
+
+//MARK: Selected Movie
+"SelectedMovie.ReleaseDate" = "Release Date: ";
+
+//MARK: RatingView
+"Rating.MaximumPoint" = "/10";

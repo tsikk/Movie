@@ -19,9 +19,9 @@ enum Tabs: Int, CaseIterable {
     var title: String {
         switch self {
         case .movie:
-            return "Movies"
+            return "Tab.Movie.Title".localized()
         case .favourite:
-            return "Favourite"
+            return "Tab.Favourite.Title".localized()
         }
     }
 

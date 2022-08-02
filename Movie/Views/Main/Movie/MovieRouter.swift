@@ -19,7 +19,7 @@ class MovieRouter: BaseRouting {
                                       message: nil,
                                       preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Ok",
+        let okAction = UIAlertAction(title: "Movie.Alert.Button.Ok".localized(),
                                      style: .default)
         
         alert.addAction(okAction)

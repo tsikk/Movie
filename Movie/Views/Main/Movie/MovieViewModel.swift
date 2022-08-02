@@ -54,11 +54,11 @@ class MovieViewModel: BaseViewModel {
         case .failure(let error):
             switch error {
             case .unauthorized:
-                router.createAlertForFetching(title: "User is not authorized")
+                router.createAlertForFetching(title: "Movie.Alert.Unauthorized".localized())
             case .invalidURL:
-                router.createAlertForFetching(title: "Invalid URL")
+                router.createAlertForFetching(title: "Movie.Alert.InvalidURL".localized())
             case .decode, .noResponse,.unexpectedStatusCode, .unknown:
-                router.createAlertForFetching(title: "Something went worng")
+                router.createAlertForFetching(title: "Movie.Alert.Default".localized())
             }
         }
     }

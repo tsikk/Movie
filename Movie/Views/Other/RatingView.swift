@@ -27,7 +27,7 @@ struct RatingView: View {
                     .foregroundColor(number > rating ? offColor : onColor)
             }
             
-            Text("\(rating)/10")
+            Text("\(rating)" + "Rating.MaximumPoint".localized())
                 .bold()
                 .foregroundColor(.white)
         }

@@ -15,7 +15,7 @@ struct MovieAssembly {
         let view = MovieContentView(viewModel: viewModel)
         let controller = BaseTabRootViewController<MovieViewModel, MovieContentView>(rootView: view)
         controller.viewModel = viewModel
-        controller.title = "Movies"
+        controller.title = "Tab.Movie.Title".localized()
         controller.tabBarItem = TabFactory.barItem(for: .movie)
         return controller
     }
