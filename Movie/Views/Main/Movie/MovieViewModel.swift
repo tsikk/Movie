@@ -64,7 +64,7 @@ class MovieViewModel: BaseViewModel {
     }
     
     override func tappedOnFavourite(movie: MoviesModel) {
-        if !movies[movie.id].isFavourite {
+        if movies[movie.id].isFavourite {
             CoreDataManager.shared.delete(with: Int16(movie.id))
         } else {
             CoreDataManager.shared.addMovie(with: movie)
