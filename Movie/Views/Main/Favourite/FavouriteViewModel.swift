@@ -41,6 +41,8 @@ final class FavouriteViewModel: BaseViewModel {
     
     override func tappedOnFavourite(movie: MoviesModel) {
         CoreDataManager.shared.delete(with: Int16(movie.id))
+        movies.removeAll()
+        getSavedMovies()
     }
     
 }
