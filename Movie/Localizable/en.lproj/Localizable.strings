@@ -26,4 +26,4 @@
 "SelectedMovie.ReleaseDate" = "Release Date: ";
 
 //MARK: RatingView
-"Rating.MaximumPoint" = "/10";
+"Rating.MaximumPoint" = "/5";

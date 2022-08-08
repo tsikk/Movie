@@ -20,6 +20,7 @@ final class FavouriteViewModel: BaseViewModel {
     }
     
     func getSavedMovies() {
+        movies.removeAll()
         CoreDataManager.shared.savedEntities.forEach { savedMovie in
             movies.append(.init(movie: Movie(backdropPath: savedMovie.backdropPath ?? "",
                                              id: Int(savedMovie.id),
@@ -41,7 +42,6 @@ final class FavouriteViewModel: BaseViewModel {
     
     override func tappedOnFavourite(movie: MoviesModel) {
         CoreDataManager.shared.delete(with: Int16(movie.id))
-        movies.removeAll()
         getSavedMovies()
     }
     
