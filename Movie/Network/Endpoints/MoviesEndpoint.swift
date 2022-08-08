@@ -46,4 +46,14 @@ extension MoviesEndpoint: Endpoint {
             return nil
         }
     }
+    
+    var queryItem: [URLQueryItem]? {
+        let accessToken = "5ce75b33377ea321b6fad2bee7baba1e"
+        switch self {
+        case .topRated, .movieDetail:
+            let queryItemToken = URLQueryItem(name: "api_key", value: "\(accessToken)")
+            let queryItemQuery = URLQueryItem(name: "", value: "")
+            return [queryItemToken, queryItemQuery]
+        }
+    }
 }

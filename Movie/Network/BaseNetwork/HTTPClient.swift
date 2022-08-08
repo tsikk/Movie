@@ -12,17 +12,14 @@ protocol HTTPClient {
 }
 
 extension HTTPClient {
-    func sendRequest<T: Decodable>(
-        endpoint: Endpoint,
-        responseModel: T.Type
-    ) async -> Result<T, RequestError> {
+    func sendRequest<T: Decodable>(endpoint: Endpoint, responseModel: T.Type) async -> Result<T, RequestError> {
         var urlComponents = URLComponents()
         urlComponents.scheme = endpoint.scheme
         urlComponents.host = endpoint.host
         urlComponents.path = endpoint.path
-
-        let urli = URL(string: "https://api.themoviedb.org/3/movie/top_rated?api_key=5ce75b33377ea321b6fad2bee7baba1e")
-        guard let url = urli else {
+        urlComponents.queryItems = endpoint.queryItem
+        
+        guard let url = urlComponents.url else {
             return .failure(.invalidURL)
         }
         
