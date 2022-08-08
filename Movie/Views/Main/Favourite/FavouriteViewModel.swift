@@ -11,7 +11,7 @@ import CoreData
 final class FavouriteViewModel: BaseViewModel {
         
     private let router = FavouriteRouter()
-    var movies = [MoviesModel]()
+    @Published var movies = [MoviesModel]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
