@@ -36,6 +36,9 @@ class CoreDataManager {
     }
     
     func addMovie(with movie: MoviesModel) {
+        
+        savedEntities.forEach { savedEntity in if savedEntity.id == movie.id { return } }
+        
         let newMovie = SelectedMovieData(context: container.viewContext)
         
         newMovie.id = Int16(movie.id)
